@@ -1,14 +1,26 @@
 import { useState, useContext } from "react";
-import ActionContext from "../../contexts/action_context";
+import data from "../../data.json";
+import MainContext from "../../contexts/main_context";
 import Activity from "../activity";
 
 const Home = () => {
-  let context = useContext(ActionContext);
-  let activities = context.appState.activities;
+  let [appState, setAppState] = useState(data);
+  let [actionLog, setActionLog] = useState([]);
 
-  return activities.map((props, i) => (
-    <Activity key={i} {...props} />
-  ));
+  let process = (action) => {
+    setActionLog(l => l.concat(action));
+    setAppState(s => action.process(s));
+  };
+
+  let contextValue = {
+    appState, setAppState, actionLog, setActionLog, process
+  };
+
+  return (
+    <MainContext.Provider value={contextValue}>
+      {appState.activities.map((props, i) => <Activity key={i} {...props} />)}
+    </MainContext.Provider>
+  );
 };
 
 export default Home;

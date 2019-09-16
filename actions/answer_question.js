@@ -5,10 +5,12 @@ class AnswerQuestion {
   }
 
   process(appState) {
-    appState.responses.push({
+    const newResponses = appState.responses.concat({
       question_id: this.questionId,
       value: this.value,
     });
+
+    return {...appState, responses: newResponses };
   }
 }
 

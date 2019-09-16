@@ -1,9 +1,14 @@
 import { useContext } from "react";
-import ActionContext from "../../contexts/action_context";
+import MainContext from "../../contexts/main_context";
 import AnswerQuestion from "../../actions/answer_question";
 
 const Question = ({ id, text }) => {
-  let context = useContext(ActionContext);
+  let context = useContext(MainContext);
+
+  let responses = context.appState.responses
+    .filter(r => r.question_id === id);
+
+  let response = responses[responses.length - 1];
 
   const handleChange = (event) => {
     let { name, value } = event.target;
@@ -18,8 +23,19 @@ const Question = ({ id, text }) => {
     <div className="question">
       <span>{text}</span>
 
-      <input type="radio" name={id} value="yes" onChange={handleChange} /> Yes
-      <input type="radio" name={id} value="no" onChange={handleChange} /> No
+      <input
+        type="radio"
+        name={id}
+        value="yes"
+        checked={response && response.value === "yes" ? true : false}
+        onChange={handleChange} /> Yes
+
+      <input
+        type="radio"
+        name={id}
+        value="no"
+        checked={response && response.value === "no" ? true : false}
+        onChange={handleChange} /> No
     </div>
   );
 };
