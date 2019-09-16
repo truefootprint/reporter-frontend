@@ -1,3 +1,3 @@
-const Index = () => <p>Hello, world</p>;
+import Home from "../components/home";
 
-export default Index;
+export default Home;

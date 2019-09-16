@@ -1,0 +1,46 @@
+{
+  "activities": [
+    {
+      "name": "Activity 1",
+      "topics": [
+        {
+          "name": "Topic 1",
+          "questions": [
+            { "text": "Topic 1, question 1 goes here" },
+            { "text": "Topic 1, question 2 goes here" },
+            { "text": "Topic 1, question 3 goes here" }
+          ]
+        },
+        {
+          "name": "Topic 2",
+          "questions": [
+            { "text": "Topic 2, question 1 goes here" },
+            { "text": "Topic 2, question 2 goes here" },
+            { "text": "Topic 2, question 3 goes here" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Activity 2",
+      "topics": [
+        {
+          "name": "Topic 3",
+          "questions": [
+            { "text": "Topic 3, question 1 goes here" },
+            { "text": "Topic 3, question 2 goes here" },
+            { "text": "Topic 3, question 3 goes here" }
+          ]
+        },
+        {
+          "name": "Topic 4",
+          "questions": [
+            { "text": "Topic 4, question 1 goes here" },
+            { "text": "Topic 4, question 2 goes here" },
+            { "text": "Topic 4, question 3 goes here" }
+          ]
+        }
+      ]
+    }
+  ]
+}
