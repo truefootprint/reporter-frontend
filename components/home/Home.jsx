@@ -6,7 +6,9 @@ const Home = () => {
   let context = useContext(ActionContext);
   let activities = context.appState.activities;
 
-  return activities.map(props => <Activity {...props} />);
+  return activities.map((props, i) => (
+    <Activity key={i} {...props} />
+  ));
 };
 
 export default Home;
