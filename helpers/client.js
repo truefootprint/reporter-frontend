@@ -5,11 +5,11 @@ class Client {
     this.host = "http://localhost:3000";
   }
 
-  submitResponses(responses) {
-    this.post("/responses/batch", { responses });
+  submitActions(actions) {
+    this.post("/actions/batch", { actions });
   }
 
-  post(path, data, response, error) {
+  post(path, data) {
                                                 // TODO: authorization
     axios.post(`${this.host}${path}`, {...data, name: "Test", role: "Test"});
   }

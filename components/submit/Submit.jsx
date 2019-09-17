@@ -5,7 +5,7 @@ const Submit = () => {
   const { client, actionLog, setActionLog } = useContext(MainContext);
 
   const handleSubmit = () => {
-    client.submitResponses(actionLog);
+    client.submitActions(actionLog);
     setActionLog([]);
   };
 
