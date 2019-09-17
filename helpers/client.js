@@ -11,7 +11,7 @@ class Client {
 
   post(path, data, response, error) {
                                                 // TODO: authorization
-    axios.post(`${this.host}${path}`, {...data, name: "Azizi", role: "farmer"});
+    axios.post(`${this.host}${path}`, {...data, name: "Test", role: "Test"});
   }
 }
 
