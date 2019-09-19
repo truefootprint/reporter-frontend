@@ -6,7 +6,7 @@ class Client {
   }
 
   submitActions(actions) {
-    this.post("/actions/batch", { actions });
+    this.post("/my_updates", { actions });
   }
 
   post(path, data) {
