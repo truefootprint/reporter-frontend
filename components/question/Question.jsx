@@ -6,7 +6,7 @@ const Question = ({ id, text }) => {
   let context = useContext(MainContext);
 
   let responses = context.appState.responses
-    .filter(r => r.question_id === id);
+    .filter(r => r.project_question_id === id);
 
   let response = responses[responses.length - 1];
 

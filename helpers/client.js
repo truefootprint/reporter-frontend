@@ -3,15 +3,24 @@ import axios from "axios";
 class Client {
   constructor() {
     this.host = "http://localhost:3000";
+    this.name = "Tefo";
+    this.role = "monitor";
+  }
+
+  getMyData() {
+    return this.get("/my_data");
   }
 
   submitActions(actions) {
-    this.post("/my_updates", { actions });
+    return this.post("/my_updates", { actions });
+  }
+
+  get(path) {
+    return axios.get(`${this.host}${path}?name=${this.name}&role=${this.role}`);
   }
 
   post(path, data) {
-                                                // TODO: authorization
-    axios.post(`${this.host}${path}`, {...data, name: "Test", role: "Test"});
+    return axios.post(`${this.host}${path}`, {...data, name: this.name, role: this.role});
   }
 }
 

@@ -1,50 +1,100 @@
 {
-  "activities": [
+  "projects": [
     {
-      "name": "Activity 1",
-      "topics": [
+      "id": 1,
+      "name": "Test Project",
+      "current_project_activity": null,
+      "completion_questions": [
         {
-          "name": "Topic 1",
-          "questions": [
-            { "id": 1, "text": "Topic 1, question 1 goes here" },
-            { "id": 2, "text": "Topic 1, question 2 goes here" },
-            { "id": 3, "text": "Topic 1, question 3 goes here" }
-          ]
+          "id": 4,
+          "completion_value": "yes"
         },
         {
-          "name": "Topic 2",
-          "questions": [
-            { "id": 4, "text": "Topic 2, question 1 goes here" },
-            { "id": 5, "text": "Topic 2, question 2 goes here" },
-            { "id": 6, "text": "Topic 2, question 3 goes here" }
-          ]
+          "id": 8,
+          "completion_value": "yes"
         }
-      ]
-    },
-    {
-      "name": "Activity 2",
-      "topics": [
+      ],
+      "project_activities": [
         {
-          "name": "Topic 3",
-          "questions": [
-            { "id": 7, "text": "Topic 3, question 1 goes here" },
-            { "id": 8, "text": "Topic 3, question 2 goes here" },
-            { "id": 9, "text": "Topic 3, question 3 goes here" }
-          ]
+          "id": 1,
+          "name": "Activity 1",
+          "project_questions": {
+            "by_topic": [
+              {
+                "topic": {
+                  "name": "Topic 1"
+                },
+                "project_questions": [
+                  {
+                    "id": 1,
+                    "text": "Question 1"
+                  },
+                  {
+                    "id": 2,
+                    "text": "Question 2"
+                  }
+                ]
+              },
+              {
+                "topic": {
+                  "name": "Topic 2"
+                },
+                "project_questions": [
+                  {
+                    "id": 3,
+                    "text": "Question 3"
+                  },
+                  {
+                    "id": 4,
+                    "text": "Question 4"
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
-          "name": "Topic 4",
-          "questions": [
-            { "id": 10, "text": "Topic 4, question 1 goes here" },
-            { "id": 11, "text": "Topic 4, question 2 goes here" },
-            { "id": 12, "text": "Topic 4, question 3 goes here" }
-          ]
+          "id": 2,
+          "name": "Activity 2",
+          "project_questions": {
+            "by_topic": [
+              {
+                "topic": {
+                  "name": "Topic 3"
+                },
+                "project_questions": [
+                  {
+                    "id": 5,
+                    "text": "Question 5"
+                  },
+                  {
+                    "id": 6,
+                    "text": "Question 6"
+                  }
+                ]
+              },
+              {
+                "topic": {
+                  "name": "Topic 4"
+                },
+                "project_questions": [
+                  {
+                    "id": 7,
+                    "text": "Question 7"
+                  },
+                  {
+                    "id": 8,
+                    "text": "Question 8"
+                  }
+                ]
+              }
+            ]
+          }
         }
       ]
     }
   ],
   "responses": [
-    { "question_id": 1, "value": "yes" },
-    { "question_id": 3, "value": "no" }
+
   ]
 }
