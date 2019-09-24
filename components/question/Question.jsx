@@ -2,7 +2,7 @@ import { useContext } from "react";
 import MainContext from "../../contexts/main_context";
 import AnswerQuestion from "../../actions/answer_question";
 
-const Question = ({ id, text }) => {
+const Question = ({ id, text, expected_value }) => {
   let context = useContext(MainContext);
 
   let responses = context.appState.responses
@@ -36,6 +36,8 @@ const Question = ({ id, text }) => {
         value="no"
         checked={response && response.value === "no" ? true : false}
         onChange={handleChange} /> No
+
+      {expected_value && <span> (expected: {expected_value.value})</span>}
     </div>
   );
 };
